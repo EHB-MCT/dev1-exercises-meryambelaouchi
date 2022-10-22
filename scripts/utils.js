@@ -30,3 +30,20 @@ export function rgb(r, g, b) {
     let rgb = "rgb(" + r + "," + g + "," + b + ")";
     return rgb;
 }
+
+export function strokeEllipse(x, y, rX, rY) {
+    context.beginPath();
+    context.ellipse(x, y, rX, rY, 0, 0, Math.PI * 2);
+    context.stroke();
+}
+
+export function fillEllipse(x, y, rX, rY) {
+    context.beginPath();
+    context.ellipse(x, y, rX, rY, 0, 0, Math.PI * 2);
+    context.fill();
+}
+
+export function fillAndStrokeEllipse(x, y, rX, rY) {
+    fillEllipse(x, y, rX, rY);
+    strokeEllipse(x, y, rX, rY);
+}
