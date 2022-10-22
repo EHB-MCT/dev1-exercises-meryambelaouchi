@@ -14,3 +14,8 @@ export function strokeCircle(x, y, radius) {
     context.arc(x, y, radius, 0, Math.PI * 2);
     context.stroke();
 }
+
+export function rgb(r, g, b) {
+    let rgb = "rgb(" + r + "," + g + "," + b + ")";
+    return rgb;
+}
