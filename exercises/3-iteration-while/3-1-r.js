@@ -13,7 +13,7 @@ function draw() {
 
 function drawWarpedEllipses() {
     let i = 0;
-    while (i < 7) {
+    while (i < 6) {
         let gray = 250 - (i * 50);
         context.fillStyle = Utils.rgb(gray, gray, gray);
         //This fillAndStrokeEllipse function does not exist yet!
