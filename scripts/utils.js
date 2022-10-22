@@ -15,6 +15,17 @@ export function strokeCircle(x, y, radius) {
     context.stroke();
 }
 
+export function fillCircle(x, y, radius) {
+    context.beginPath();
+    context.arc(x, y, radius, 0, Math.PI * 2);
+    context.fill();
+}
+
+export function fillAndStrokeCircle(x, y, radius) {
+    fillCircle(x, y, radius);
+    strokeCircle(x, y, radius);
+}
+
 export function rgb(r, g, b) {
     let rgb = "rgb(" + r + "," + g + "," + b + ")";
     return rgb;
