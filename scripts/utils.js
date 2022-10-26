@@ -31,6 +31,10 @@ export function rgb(r, g, b) {
     return rgb;
 }
 
+export function hsla(h, s, l, a) {
+    return "hsl(" + h + "," + s + "%," + l + "%," + a + "%)";
+}
+
 export function strokeEllipse(x, y, rX, rY) {
     context.beginPath();
     context.ellipse(x, y, rX, rY, 0, 0, Math.PI * 2);
@@ -46,4 +50,8 @@ export function fillEllipse(x, y, rX, rY) {
 export function fillAndStrokeEllipse(x, y, rX, rY) {
     fillEllipse(x, y, rX, rY);
     strokeEllipse(x, y, rX, rY);
+}
+
+export function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
