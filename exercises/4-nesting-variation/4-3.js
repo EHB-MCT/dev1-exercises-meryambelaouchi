@@ -15,7 +15,7 @@ function drawBricks() {
     for (let i = 0; i <= 5; i++) {
         for (let j = 0; j <= 2; j++) {
             context.fillStyle = '#8B0000';
-            context.fillRect(100 + i * 105, 105 + j * 110, 100, 50);
+            context.fillRect(100 + i * 105, 10 + j * 110, 100, 50);
         }
     }
 }
