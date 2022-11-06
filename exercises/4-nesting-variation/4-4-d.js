@@ -19,7 +19,7 @@ function drawCircles() {
         for (let i = 0; i <= columns; i++) {
             let radius = stepHeight + 2;
             context.fillStyle = '#E87D7D';
-            Utils.fillCircle(j * 322, 0 + i * stepWidth, radius);
+            Utils.fillCircle(j * (radius * 4), 0 + i * stepWidth, radius);
             console.log(radius);
 
         }
@@ -29,7 +29,7 @@ function drawCircles() {
         for (let i = 0; i <= columns; i++) {
             let radius = stepHeight + 2;
             context.fillStyle = '#7dc4e8';
-            Utils.fillCircle(stepWidth + j * 322, 0 + i * stepWidth, radius);
+            Utils.fillCircle(stepWidth + j * (radius * 4), 0 + i * stepWidth, radius);
         }
     }
 
