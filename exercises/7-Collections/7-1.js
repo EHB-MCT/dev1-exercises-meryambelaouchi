@@ -4,11 +4,12 @@ import * as Utils from "../../scripts/utils.js";
 
 let height = window.innerHeight;
 let width = window.innerWidth;
+let numbers = [];
 
 setup();
 
 function setup() {
-    let numbers = [];
+
     for (let i = 0; i < 1000; i++) {
         numbers[i] = Utils.randomNumber(0, 100);
     }
@@ -18,6 +19,14 @@ function setup() {
 
 }
 
-function calculateAverage() {
+function calculateAverage(list) {
+    let sum = 0;
+
+    for (let j = 0; j < list.length; j++) {
+        sum += list[j];
+    }
+
+    let average = sum / list.length;
+    return average;
 
 }
