@@ -7,11 +7,13 @@ let width = context.canvas.width;
 let height = context.canvas.height;
 
 
-
+background();
 setup();
 draw();
 
+
 function setup() {
+
     context.textAlign = "center";
     context.fillStyle = "white";
 }
@@ -19,7 +21,24 @@ function setup() {
 function draw() {
     let space = height / 5;
     drawSnail(space / 2, space / 2, space, 1);
+    drawSnail(space / 2, space * 3 / 2, space, 2);
+    drawSnail(space / 2, space * 5 / 2, space, 3);
+    drawSnail(space / 2, space * 7 / 2, space, 4);
+    drawSnail(space / 2, space * 9 / 2, space, 5);
+
 }
+
+function background() {
+    context.fillStyle = 'grey';
+    context.fillRect(0, 0, width, height);
+
+    context.fillStyle = "lightgrey";
+    context.fillRect(0, height / 5, width, height / 5);
+
+    context.fillStyle = "lightgrey";
+    context.fillRect(0, height * 3 / 5, width, height / 5);
+}
+
 
 function drawSnail(x, y, sizeY, number) {
 
